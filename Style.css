@@ -1,0 +1,280 @@
+/* Reset et base */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e6f1;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Conteneur général */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Header */
+.header {
+  background: rgba(12, 30, 44, 0.85);
+  backdrop-filter: saturate(180%) blur(10px);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+.header h1 {
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  color: #3df0d8;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #a4d0d6;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #3df0d8;
+  text-shadow: 0 0 6px #3df0d8;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  gap: 3rem;
+  animation: fadeInUp 1.2s ease forwards;
+  background: radial-gradient(circle at center, #14393d 0%, #0f2027 90%);
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  color: #3df0d8;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px #3df0d8;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #a4d0d6;
+}
+
+.hero-image img {
+  max-width: 250px;
+  filter: drop-shadow(0 0 10px #3df0d8);
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Boutons */
+.btn {
+  background: linear-gradient(90deg, #3df0d8, #00aaff);
+  border: none;
+  color: #0f2027;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(61, 240, 216, 0.6);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.btn:hover, .btn:focus {
+  background: linear-gradient(90deg, #00aaff, #3df0d8);
+  box-shadow: 0 0 20px #00aaff;
+  outline: none;
+  transform: translateY(-3px);
+}
+
+/* Sections générales */
+.section {
+  background: rgba(12, 30, 44, 0.8);
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 12px rgba(61, 240, 216, 0.3);
+  margin-bottom: 3rem;
+  animation: fadeIn 1s ease forwards;
+}
+
+.section h3 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: #3df0d8;
+  text-shadow: 0 0 6px #3df0d8;
+}
+
+.section p, .section ul {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #a4d0d6;
+}
+
+.section ul li {
+  margin-bottom: 0.8rem;
+}
+
+/* Wallet section */
+.wallet-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.wallet-actions label {
+  flex-basis: 100%;
+  color: #a4d0d6;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  user-select: none;
+}
+
+.wallet-actions input {
+  flex-grow: 1;
+  min-width: 200px;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  color: #0f2027;
+}
+
+.wallet-actions input:focus {
+  outline: 2px solid #3df0d8;
+}
+
+.wallet-actions button {
+  align-self: flex-end;
+  min-width: 120px;
+}
+
+/* Wallet address text */
+.wallet-address {
+  font-family: 'Courier New', Courier, monospace;
+  background: rgba(61, 240, 216, 0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  color: #3df0d8;
+  user-select: text;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+/* Contact Instagram */
+.contact p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #a4d0d6;
+}
+
+.instagram-btn {
+  background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+  box-shadow: 0 4px 15px rgba(252, 176, 69, 0.6);
+  transition: all 0.3s ease;
+}
+
+.instagram-btn:hover {
+  box-shadow: 0 0 20px #fd1d1d;
+  transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+  background: rgba(12, 30, 44, 0.9);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1rem;
+  color: #3df0d8;
+  font-weight: 600;
+  box-shadow: inset 0 1px 4px #0a1e2d;
+  user-select: none;
+}
+
+.footer code {
+  background: rgba(61, 240, 216, 0.2);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #3df0d8;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0; transform: translateY(40px);
+  }
+  100% {
+    opacity: 1; transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero-text, .hero-image {
+    flex: unset;
+    width: 100%;
+    text-align: center;
+  }
+  .nav-links {
+    justify-content: center;
+    gap: 1rem;
+  }
+  .wallet-actions {
+    flex-direction: column;
+  }
+}

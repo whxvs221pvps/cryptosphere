@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cryptosphere-Whxs_pvps</title>
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <h1>Cryptosphere</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#history">History</a></li>
+        <li><a href="#invest">How to Invest</a></li>
+        <li><a href="#wallet">Wallet & Send/Receive</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+	<select id="languageSelector">
+  <option value="en">English</option>
+  <option value="fr" selected>Français</option>
+</select>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h2>Welcome to whxvs_pvps Cryptosphere Hub</h2>
+      <p>Your gateway to the future of crypto investing.</p>
+      <button id="connectWalletBtn" class="btn">Connect MetaMask Wallet</button>
+      <p id="walletAddress" class="wallet-address"></p>
+    </div>
+    <div class="hero-image">
+      <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="Crypto illustration" />
+    </div>
+  </div>
+</section>
+
+<section id="history" class="section history">
+  <div class="container">
+    <h3>The History of Cryptocurrency</h3>
+    <p>
+A cryptocurrency, also known as a crypto asset, crypto currency, cryptographic money, cyber money, or digital token, is a form of electronic money or digital asset that is issued and transferred directly between users without the need for a central authority such as a bank, central bank, or any human intermediary. This peer-to-peer system operates over a decentralized computer network that relies on blockchain technology—a distributed ledger that securely records transactions using advanced cryptographic techniques. The blockchain ensures that all transactions are transparent, immutable, and verified by consensus among network participants.
+
+Cryptocurrencies first appeared in 2009 with the creation of Bitcoin and its underlying blockchain technology. Since then, thousands of other crypto assets have emerged, often referred to as altcoins—a term that combines “alternative” and “coin” to describe cryptocurrencies other than Bitcoin. These altcoins typically also utilize blockchain technology but vary in their consensus algorithms, features, and intended purposes. Some are designed to be more energy-efficient, addressing concerns about the high resource consumption of early cryptocurrencies. Others focus on increasing user privacy, scalability, or enabling smart contracts and decentralized applications.
+
+The decentralized nature of cryptocurrencies allows for secure, borderless transactions without relying on traditional financial institutions, which can reduce transaction costs and increase financial inclusion globally. This innovation has led to widespread interest and adoption by individuals, businesses, and even governments exploring blockchain’s potential beyond currency, such as in supply chain management, voting systems, and digital identity.
+
+Today, the most recognized and widely used cryptocurrencies remain Bitcoin (BTC) and Ethereum (ETH). Bitcoin is often seen as a digital store of value, sometimes called “digital gold,” while Ethereum provides a platform for decentralized applications and programmable smart contracts, enabling new kinds of decentralized finance and digital services. The cryptocurrency ecosystem continues to evolve rapidly, with ongoing developments in technology, regulation, and adoption shaping the future of money and digital assets.
+    </p>
+  </div>
+</section>
+
+<section id="invest" class="section invest">
+  <div class="container">
+    <h3>How to Invest in Cryptocurrency Wisely</h3>
+    <p>Investing in cryptocurrencies can be highly rewarding but also carries significant risks. To protect your capital and maximize your potential returns, it’s essential to approach crypto investments with careful planning and sound strategies.</p>
+    
+    <ul>
+      <li><strong>Conduct thorough research:</strong> Before investing in any cryptocurrency, take the time to understand the project’s fundamentals, technology, use case, and team. Analyze whitepapers, roadmaps, and community feedback to gauge the asset’s long-term potential.</li>
+      
+      <li><strong>Diversify your portfolio:</strong> Avoid putting all your funds into a single coin or token. Spreading investments across different cryptocurrencies can help reduce risk and increase exposure to various market opportunities.</li>
+      
+      <li><strong>Use secure wallets:</strong> Store your crypto assets in reputable wallets such as hardware wallets (Ledger, Trezor) or trusted software wallets like MetaMask. Avoid keeping large sums on exchanges to minimize exposure to hacks and thefts.</li>
+      
+      <li><strong>Stay updated and vigilant:</strong> The crypto market moves fast. Keep yourself informed about market trends, regulatory changes, and security practices. Join reputable forums, follow credible news sources, and never share your private keys.</li>
+      
+      <li><strong>Beware of scams and fraud:</strong> The crypto space attracts many bad actors. Be cautious with promises of guaranteed returns, unsolicited investment offers, and phishing attempts. Always verify the legitimacy of exchanges and projects before committing funds.</li>
+      
+      <li><strong>Have a clear investment plan:</strong> Set realistic goals, decide your entry and exit points, and consider your risk tolerance. Use strategies such as dollar-cost averaging to minimize the impact of volatility.</li>
+      
+      <li><strong>Understand tax implications:</strong> Cryptocurrency gains may be subject to taxation depending on your jurisdiction. Keep accurate records of transactions and consult with a tax professional if needed.</li>
+    </ul>
+    
+    <p>Remember, while cryptocurrencies offer exciting opportunities, they are highly volatile and speculative. Investing wisely means balancing optimism with caution, and always prioritizing security and informed decision-making.</p>
+  </div>
+</section>
+
+
+<section id="wallet" class="section wallet">
+  <div class="container">
+    <h3>Send & Receive Crypto</h3>
+    <p>Connected Wallet Address: <span id="userWallet" class="wallet-address">Not connected</span></p>
+    
+    <div class="wallet-actions">
+      <label for="recipient">Recipient Address:</label>
+      <input type="text" id="recipient" placeholder="0x..." />
+      
+      <label for="amount">Amount (ETH):</label>
+      <input type="number" id="amount" placeholder="0.01" min="0" step="0.0001" />
+      
+      <button id="sendBtn" class="btn" disabled>Send ETH</button>
+    </div>
+  </div>
+</section>
+
+<section id="realtime-chart" class="section chart">
+  <div class="container">
+    <h3>Crypto Price in Real-Time (ETH/USD)</h3>
+    <canvas id="cryptoChart" width="400" height="200"></canvas>
+  </div>
+</section>
+
+
+<section id="contact" class="section contact">
+  <div class="container">
+    <h3>Contact Me</h3>
+    <p>Follow or DM me on Instagram</p>
+    <a href="https://www.instagram.com/whxvs_pvps/" target="_blank" rel="noopener" class="btn instagram-btn">Instagram</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <p>Made by whxs_pvps</p>
+    <p>Send crypto to: <code>0x363bdf48a6f4dc029da83aa3c970bd99e24e1aef</code></p>
+  </div>
+</footer>
+
+<script>
+  let web3;
+  const connectBtn = document.getElementById('connectWalletBtn');
+  const walletAddrSpan = document.getElementById('walletAddress');
+  const userWalletSpan = document.getElementById('userWallet');
+  const sendBtn = document.getElementById('sendBtn');
+
+  async function connectWallet() {
+    if (window.ethereum) {
+      try {
+        await window.ethereum.request({ method: 'eth_requestAccounts' });
+        web3 = new Web3(window.ethereum);
+        const accounts = await web3.eth.getAccounts();
+        const account = accounts[0];
+        walletAddrSpan.textContent = `Connected: ${account}`;
+        userWalletSpan.textContent = account;
+        sendBtn.disabled = false;
+      } catch (error) {
+        alert('User rejected connection or error occurred.');
+      }
+    } else {
+      alert('Please install MetaMask!');
+    }
+  }
+
+  connectBtn.addEventListener('click', connectWallet);
+
+  sendBtn.addEventListener('click', async () => {
+    const recipient = document.getElementById('recipient').value.trim();
+    const amountEth = document.getElementById('amount').value.trim();
+    if (!web3.utils.isAddress(recipient)) {
+      alert('Invalid recipient address');
+      return;
+    }
+    if (isNaN(amountEth) || parseFloat(amountEth) <= 0) {
+      alert('Enter a valid amount');
+      return;
+    }
+    const accounts = await web3.eth.getAccounts();
+    const sender = accounts[0];
+    const amountWei = web3.utils.toWei(amountEth, 'ether');
+    try {
+      await web3.eth.sendTransaction({
+        from: sender,
+        to: recipient,
+        value: amountWei,
+      });
+      alert('Transaction sent!');
+      document.getElementById('recipient').value = '';
+      document.getElementById('amount').value = '';
+    } catch (error) {
+      alert('Transaction failed or rejected.');
+    }
+  });
+</script>
+
+<script>
+  const ctx = document.getElementById('cryptoChart').getContext('2d');
+  const cryptoChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [],
+      datasets: [{
+        label: 'ETH/USD',
+        data: [],
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 2,
+        fill: false,
+        tension: 0.1
+      }]
+    },
+    options: {
+      responsive: true,
+      animation: false,
+      scales: {
+        x: { title: { display: true, text: 'Time' } },
+        y: { title: { display: true, text: 'Price (USD)' } }
+      }
+    }
+  });
+
+  async function fetchCryptoPrice() {
+    try {
+      const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd');
+      const data = await response.json();
+      const price = data.ethereum.usd;
+      const now = new Date().toLocaleTimeString();
+
+      cryptoChart.data.labels.push(now);
+      cryptoChart.data.datasets[0].data.push(price);
+
+      if (cryptoChart.data.labels.length > 20) {
+        cryptoChart.data.labels.shift();
+        cryptoChart.data.datasets[0].data.shift();
+      }
+
+      cryptoChart.update();
+    } catch (err) {
+      console.error('Error fetching price:', err);
+    }
+  }
+
+  setInterval(fetchCryptoPrice, 5000); // mise à jour toutes les 5 secondes
+</script>
+<script>
+  const translations = {
+    en: {
+      welcome: "Welcome to whxvs_pvps Cryptosphere Hub",
+      gateway: "Your gateway to the future of crypto investing.",
+      connect: "Connect MetaMask Wallet",
+      connected: "Connected",
+      historyTitle: "The History of Cryptocurrency",
+      investTitle: "How to Invest in Cryptocurrency Wisely",
+      walletTitle: "Send & Receive Crypto",
+      contactTitle: "Contact Me",
+      follow: "Follow or DM me on Instagram"
+    },
+    fr: {
+      welcome: "Bienvenue sur le hub Cryptosphere de whxvs_pvps",
+      gateway: "Votre passerelle vers le futur de l'investissement crypto.",
+      connect: "Connecter le portefeuille MetaMask",
+      connected: "Connecté",
+      historyTitle: "L'histoire des Cryptomonnaies",
+      investTitle: "Comment investir dans les cryptos intelligemment",
+      walletTitle: "Envoyer & Recevoir de la crypto",
+      contactTitle: "Me contacter",
+      follow: "Suivez-moi ou envoyez-moi un message sur Instagram"
+    }
+  };
+
+  const langSelector = document.getElementById('languageSelector');
+
+  function translatePage(lang) {
+    document.querySelector('.hero-text h2').textContent = translations[lang].welcome;
+    document.querySelector('.hero-text p').textContent = translations[lang].gateway;
+    document.getElementById('connectWalletBtn').textContent = translations[lang].connect;
+    if (walletAddrSpan.textContent.includes('Connected') || walletAddrSpan.textContent.includes('Connecté')) {
+      walletAddrSpan.textContent = `${translations[lang].connected}: ${userWalletSpan.textContent}`;
+    }
+    document.querySelector('#history h3').textContent = translations[lang].historyTitle;
+    document.querySelector('#invest h3').textContent = translations[lang].investTitle;
+    document.querySelector('#wallet h3').textContent = translations[lang].walletTitle;
+    document.querySelector('#contact h3').textContent = translations[lang].contactTitle;
+    document.querySelector('#contact p').textContent = translations[lang].follow;
+  }
+
+  langSelector.addEventListener('change', () => {
+    translatePage(langSelector.value);
+  });
+
+  // Traduction initiale
+  translatePage(langSelector.value);
+</script>
+
+</body>
+</html>
